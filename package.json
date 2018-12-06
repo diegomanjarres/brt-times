@@ -1,0 +1,17 @@
+{
+  "name": "brt-times",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gaussian": "^1.1.0",
+    "knex": "^0.14.6",
+    "lodash": "^4.17.11",
+    "pg": "^7.4.3"
+  }
+}

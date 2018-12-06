@@ -1,0 +1,3 @@
+sniffing wlan1
+1540517185	b0:05:94:23:9d:21	Liteon Technology Corporation	b'Motta'	2018-10-26 01:26:26.164524
+1540517190	b0:05:94:23:9d:21	Liteon Technology Corporation	b'Motta'	2018-10-26 01:26:30.582785
