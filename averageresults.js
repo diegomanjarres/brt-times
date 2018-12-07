@@ -2,9 +2,9 @@ const {input} = process.env
 const readline = require('readline')
 const fs = require('fs');
 
-
+console.log('group,avg_time')
 var lineReader = readline.createInterface({
-  input: fs.createReadStream('./' + input)
+  input: fs.createReadStream(input)
 });
 
 const avg =(arr) => {
