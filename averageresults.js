@@ -16,14 +16,13 @@ let times = []
 
 lineReader.on('line', (line) => {
   const [,,,time,depTime] = line.split(',')
-  //console.log(time, depTime, times);
-  // if(time>1800)return
+  if(isNaN(time))return
   if(depTime==group){
     times.push(time)
     return
   }
 
-  console.log(group,avg(times))
+  console.log(group + ','+ avg(times))
   group=depTime
   times = [time]
 });

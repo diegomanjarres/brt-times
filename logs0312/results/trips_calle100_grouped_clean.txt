@@ -1,5 +1,4 @@
 mac,dep_station,dep_time,time,dep_time_group
-mac,dep_station,dep_time,time,NaN
 80:71:7a:70:64:80,calle100,286,223,0
 fc:42:03:7e:50:79,calle100,291,228,0
 d4:38:9c:25:65:e1,calle100,315,291,300

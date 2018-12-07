@@ -12,13 +12,15 @@ let group = 0
 let groupCount=0
 lineReader.on('line', (line) => {
   const splitLine = line.split(',')
+  if(isNaN(splitLine[1]))return
+
   const lineGroup =  round(precission)(splitLine[1])
   if(lineGroup==group){
     groupCount++
     return
   }
 
-  console.log(group,groupCount)
+  console.log(group+ ',' + groupCount)
   group=lineGroup
   times = groupCount=0
 });
