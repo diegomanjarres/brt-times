@@ -16,6 +16,9 @@ var spottingTwoLineReader = readline.createInterface({
 });
 const STATION_ONE='heroes'
 const STATION_TWO='calle100'
+fs.writeFileSync(`./logs0312/results/trips_${STATION_ONE}.csv`,'mac,dep_station,dep_time,time\n')
+fs.writeFileSync(`./logs0312/results/trips_${STATION_TWO}.csv`,'mac,dep_station,dep_time,time\n')
+
 
 const initialSpottings = {[STATION_ONE]:{},[STATION_TWO]:{}}
 
@@ -28,7 +31,6 @@ const registerEvent = (place, line) => {
   }
   const split = line.split('\t')
   const row = { mac:split[1], manufacturer:split[2], place, time: +offsets[place] + +split[0]}
-  //insertOnDatabase(row)
   let initial = initialSpottings[place][row.mac]
   if(!initial || row.time < initial){
     initialSpottings[place][row.mac] = row.time;
@@ -54,7 +56,7 @@ const closeCb = () => {
     })
 
   flow.forEach((t) => {
-    console.log(_.values(t).join(','))
+    fs.appendFileSync(`./logs0312/results/flow_${t.from}.csv`,_.values(t).join(',') + '\n')
   })
 
 }
