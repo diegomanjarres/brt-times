@@ -35,9 +35,24 @@ matplot(calle100ac[, 1], calle100ac[,2], type="l", xlab="tiempo de salida(s)", y
 dev.copy(png,'./charts/calle100ac.png')
 dev.off()
 
+calle100m <- read.csv("projects/brt-times/logs0312/results/trips_calle100_median.csv", stringsAsFactors = F)
+matplot(calle100m[, 1], calle100m[,2], type="l", xlab="tiempo de salida(s)", ylab="tiempo de viaje(s)")
+dev.copy(png,'./charts/calle100m.png')
+dev.off()
+
+calle100mc <- read.csv("projects/brt-times/logs0312/results/trips_calle100_median_clean.csv", stringsAsFactors = F)
+matplot(calle100mc[, 1], calle100mc[,2], type="l", xlab="tiempo de salida(s)", ylab="tiempo de viaje(s)")
+dev.copy(png,'./charts/calle100mc.png')
+dev.off()
+
 flowcalle100 <- read.csv("projects/brt-times/logs0312/results/flow_calle100_grouped.csv", stringsAsFactors = F)
 matplot(flowcalle100[, 1], flowcalle100[,2], type="h", xlab="tiempo de salida(s)", ylab="observaciones")
 dev.copy(png,'./charts/flow_calle100.png')
+dev.off()
+
+tripsflowcalle100 <- read.csv("projects/brt-times/logs0312/results/trips_flow_calle100_grouped.csv", stringsAsFactors = F)
+matplot(tripsflowcalle100[, 1], tripsflowcalle100[,2], type="h", xlab="tiempo de salida(s)", ylab="viajes")
+dev.copy(png,'./charts/trips_flow_calle100.png')
 dev.off()
 
 
@@ -76,8 +91,22 @@ matplot(heroesac[, 1], heroesac[,2], type="l", xlab="tiempo de salida(s)", ylab=
 dev.copy(png,'./charts/heroesac.png')
 dev.off()
 
+heroesm <- read.csv("projects/brt-times/logs0312/results/trips_heroes_median.csv", stringsAsFactors = F)
+matplot(heroesm[, 1], heroesm[,2], type="l", xlab="tiempo de salida(s)", ylab="tiempo de viaje(s)")
+dev.copy(png,'./charts/heroesm.png')
+dev.off()
+
+heroesmc <- read.csv("projects/brt-times/logs0312/results/trips_heroes_median_clean.csv", stringsAsFactors = F)
+matplot(heroesmc[, 1], heroesmc[,2], type="l", xlab="tiempo de salida(s)", ylab="tiempo de viaje(s)")
+dev.copy(png,'./charts/heroesmc.png')
+dev.off()
 
 flowheroes <- read.csv("projects/brt-times/logs0312/results/flow_heroes_grouped.csv", stringsAsFactors = F)
 matplot(flowheroes[, 1], flowheroes[,2], type="h", xlab="tiempo de salida(s)", ylab="observaciones")
 dev.copy(png,'./charts/flow_heroes.png')
+dev.off()
+
+tripsflowheroes <- read.csv("projects/brt-times/logs0312/results/trips_flow_heroes_grouped.csv", stringsAsFactors = F)
+matplot(tripsflowheroes[, 1], tripsflowheroes[,2], type="h", xlab="tiempo de salida(s)", ylab="viajes")
+dev.copy(png,'./charts/trips_flow_heroes.png')
 dev.off()
