@@ -9,10 +9,10 @@ var knex = require('knex')({
 });
 
 var spottingOneLineReader = readline.createInterface({
-  input: fs.createReadStream('./logs0312/heroes/probemon_out.txt')
+  input: fs.createReadStream('./logs0312/heroes/spottings_sync.txt')
 });
 var spottingTwoLineReader = readline.createInterface({
-  input: fs.createReadStream('./logs0312/calle100/fullout.txt')
+  input: fs.createReadStream('./logs0312/calle100/spottings_sync.txt')
 });
 const STATION_ONE='heroes'
 const STATION_TWO='calle100'
