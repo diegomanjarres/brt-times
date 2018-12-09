@@ -8,6 +8,7 @@ var lineReader = readline.createInterface({
 });
 
 const avg =(arr) => {
+  if(!arr.length)return 0
   return arr.reduce((a,b) => +a + +b ,0) / arr.length
 }
 
@@ -15,8 +16,8 @@ let group = 0
 let times = []
 
 lineReader.on('line', (line) => {
+  if(line.startsWith('mac'))return
   const [,,,time,depTime] = line.split(',')
-  if(isNaN(time))return
   if(depTime==group){
     times.push(time)
     return

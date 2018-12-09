@@ -16,8 +16,8 @@ var spottingTwoLineReader = readline.createInterface({
 });
 const STATION_ONE='heroes'
 const STATION_TWO='calle100'
-fs.writeFileSync(`./logs0312/results/trips_${STATION_ONE}.csv`,'mac,dep_station,dep_time,time\n')
-fs.writeFileSync(`./logs0312/results/trips_${STATION_TWO}.csv`,'mac,dep_station,dep_time,time\n')
+fs.writeFileSync(`./logs0312/results/flow_${STATION_ONE}.csv`,'dep_station,dep_time\n')
+fs.writeFileSync(`./logs0312/results/flow_${STATION_TWO}.csv`,'dep_station,dep_time\n')
 
 
 const initialSpottings = {[STATION_ONE]:{},[STATION_TWO]:{}}
