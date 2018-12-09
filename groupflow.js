@@ -14,7 +14,7 @@ lineReader.on('line', (line) => {
   const splitLine = line.split(',')
   if(isNaN(splitLine[1]))return
 
-  const lineGroup =  round(precission)(splitLine[1])
+  const lineGroup =  round(precission)(splitLine[1])/60
   if(lineGroup==group){
     groupCount++
     return
